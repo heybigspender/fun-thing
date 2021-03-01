@@ -4,21 +4,21 @@ Spring[] springs = new Spring[6];
 
 float particleSize = 70;
 float particleMass = 20;
-float springK = 5;
+float springK = 3;
 
 PVector gravity = new PVector(0, 3);
 
 void setup() {
   size(800, 600);
 
-  nodes[0] = new Particle(200, 400, particleMass, particleSize, color(255, 0, 0), false);
-  nodes[1] = new Particle(500, 400, particleMass, particleSize, color(255, 0, 0), false);
-  nodes[2] = new Particle(600, 100, particleMass, particleSize, color(255, 0, 0), false);
-  nodes[3] = new Particle(200, 200, particleMass, particleSize, color(255, 0, 0), false);
+  nodes[0] = new Particle(100, 300, particleMass, particleSize, color(255, 0, 0), false);
+  nodes[1] = new Particle(300, 300, particleMass, particleSize, color(255, 0, 0), false);
+  nodes[2] = new Particle(300, 100, particleMass, particleSize, color(255, 0, 0), false);
+  nodes[3] = new Particle(100, 100, particleMass, particleSize, color(255, 0, 0), false);
 
-  springs[0] = new Spring(springK, 300, nodes[0], nodes[1]);
+  springs[0] = new Spring(springK, 200, nodes[0], nodes[1]);
   springs[1] = new Spring(springK, 200, nodes[1], nodes[2]);
-  springs[2] = new Spring(springK, 300, nodes[2], nodes[3]);
+  springs[2] = new Spring(springK, 200, nodes[2], nodes[3]);
   springs[3] = new Spring(springK, 200, nodes[3], nodes[0]);
   springs[4] = new Spring(springK, 400, nodes[0], nodes[2]);
   springs[5] = new Spring(springK, 400, nodes[3], nodes[1]);
